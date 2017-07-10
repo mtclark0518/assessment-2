@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+#section{
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+#game {
+	width: 80%;
+	min-height: 350px;
+	border: 1px solid black;
+	margin: 50px auto 0;
+}
+#section button {
+	margin-top: 25px;
+}
+
+.player {
+	border: 1px solid black;
+	background: black;
+	width: 40px;
+	height: 40px;
+}
+.player#one {
+	position: relative;
+	background: blue;
+	top: 60px;
+}
+.player#two {
+	position: relative;
+	background: red;
+	top: 150px;
+
+}
