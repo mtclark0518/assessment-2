@@ -27,10 +27,11 @@
 	position: relative;
 	background: blue;
 	top: 60px;
+	left: 40px;
 }
 .player#two {
 	position: relative;
-	background: red;
 	top: 150px;
+	left: 0px;
 
 }

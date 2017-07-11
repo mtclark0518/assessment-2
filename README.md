@@ -20,7 +20,6 @@ You will be working individually for this assignment, but we'll be guiding you a
 
 #### Requirements
 
-- Your game should have two pages: a landing page and a game page
 - Include separate HTML, CSS, JavaScript files
 - Choose an existing landing page on the web; screen shot the landing page, and replicate its design to create a separate game landing page that links to your game\*
 - Style your landing page and game page with class-based CSS
