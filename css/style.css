@@ -13,13 +13,55 @@
 }
 #game {
 	width: 80%;
-	min-height: 350px;
+	min-height: 300px;
+	background: white;
 	border: 1px solid black;
 	margin: 50px auto 0;
 }
 #section button {
 	margin-top: 25px;
 }
+/*************************LANDING PAGE STYLES***************************/
+.body {
+	text-align: center;
+
+}
+.body {
+	background: url("../coding-everest.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+}
+.nav {
+	height: 50px;
+	background: #C5D1D9;
+}
+h1 {
+	text-align: center;
+	color: white;
+	margin-top: 150px;
+}
+#logo {
+	position: absolute;
+	left: 0;
+	height: 50px;
+	width: 50px;
+}
+button a{
+	text-decoration: none;
+	color: #8BBC52;
+	font-weight: bold;
+	padding: 15px;
+
+}
+#play {
+	text-align: center;
+	border: none;
+	border-radius: 3px;
+	background: #5486B9;
+
+}
+
 
 /*************************PLAYER STYLES***************************/
 
@@ -40,4 +82,22 @@
 	top: 150px;
 	left: 0px;
 
+}
+
+/*************************MEDIA QUERY***************************/
+
+@media (max-width: 720px){
+	.player {
+		width: 20px;
+		height: 20px;
+	}
+	.player#one{
+		background: red;
+	}
+	.player#two{
+		background: green;
+	}	
+	div#game{
+		min-height: 250px;
+	}	
 }
