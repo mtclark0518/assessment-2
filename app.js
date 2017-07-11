@@ -1,33 +1,32 @@
+
+//GLOBAL VARIABLE DECLARATIONS
+
 var player1 = document.querySelector('.player#one');
 var player2 = document.querySelector('.player#two');
 		
 
+
+//IN-GAME EVENT FUNCTIONS 
 function clickHandle(){
 	var p = this.style.left;
 	var x = parseInt(p,10);
 	if(x === 0){	
 		this.style.left = "50px";
 	}else if(x===500){
-		alert( + " is the winner");
+		alert( "You are the winner");
 		newGame();
 	}else{
 		var newLocation = x + 50 + "px";
 		this.style.left = newLocation;
 	}
 }
-
 var keyupListener = function(name){
 	name.pieceLocation.addEventListener('click', clickHandle);	
 };
-		
-var Player = function(name, pieceLocation){
-	this.name = name;
-	this.pieceLocation = pieceLocation;	
+var reset = function(){
+	var button = document.getElementById("reset");
+	button.addEventListener('click', newGame);
 };
-
-var tyler = new Player("Tyler", player1);
-var hung = new Player("Hung", player2);
-
 function newGame(){
 	var tyler = new Player("Tyler", player1);
 	var hung = new Player("Hung", player2);
@@ -40,8 +39,16 @@ function newGame(){
 	keyupListener(hung);
 	reset();
 }
-var reset = function(){
-	var button = document.getElementById("reset");
-	button.addEventListener('click', newGame);
+
+
+//PLAYER OBJECT AND DECLARATIONS	
+var Player = function(name, pieceLocation){
+	this.name = name;
+	this.pieceLocation = pieceLocation;	
 };
+var tyler = new Player("Tyler", player1);
+var hung = new Player("Hung", player2);
+
+
+
 newGame();
