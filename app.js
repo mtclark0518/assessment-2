@@ -1,39 +1,47 @@
-
-console.log('helloworld');
-var pos1 = 0;
-var pos2 = 0;
 var player1 = document.querySelector('.player#one');
 var player2 = document.querySelector('.player#two');
-var eventList = document.addEventListener("keyup", event);
 		
-var clickHandle = function(){
-	this.style.left = "50px";
-};
+
+function clickHandle(){
+	var p = this.style.left;
+	var x = parseInt(p,10);
+	if(x === 0){	
+		this.style.left = "50px";
+	}else if(x===500){
+		alert( + " is the winner");
+		newGame();
+	}else{
+		var newLocation = x + 50 + "px";
+		this.style.left = newLocation;
+	}
+}
 
 var keyupListener = function(name){
-	name.pieceLocation.addEventListener('click', clickHandle);
-		// name.pieceLocation.style.left = "25px";
-	
+	name.pieceLocation.addEventListener('click', clickHandle);	
 };
 		
-var Player = function(name, pieceLocation, ev){
+var Player = function(name, pieceLocation){
 	this.name = name;
-	this.pieceLocation = pieceLocation;
-	
+	this.pieceLocation = pieceLocation;	
 };
+
 var tyler = new Player("Tyler", player1);
 var hung = new Player("Hung", player2);
 
-function newGame(p1,p2){
+function newGame(){
 	var tyler = new Player("Tyler", player1);
 	var hung = new Player("Hung", player2);
 	score = 0;
-	var grab1 = p1.pieceLocation;
-	var grab2 = p2.pieceLocation;
+	var grab1 = tyler.pieceLocation;
+	var grab2 = hung.pieceLocation;
 	grab1.style.left = '0px';
 	grab2.style.left = '0px';
 	keyupListener(tyler);
 	keyupListener(hung);
+	reset();
 }
-
-newGame(tyler, hung);
+var reset = function(){
+	var button = document.getElementById("reset");
+	button.addEventListener('click', newGame);
+};
+newGame();
