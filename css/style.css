@@ -86,7 +86,32 @@ button a{
 
 /*************************MEDIA QUERY***************************/
 
-@media (max-width: 720px){
+@media (max-width: 900px){
+	.player {
+		width: 30px;
+		height: 30px;
+	}
+	.player#one{
+		background: yellow;
+	}
+	.player#two{
+		background: purple;
+	}	
+	div#game{
+		min-height: 250px;
+	}
+	#play{
+		font-style: normal;
+		background: #8BBC52;
+	}	
+	button a{
+		color: #5486B9;
+	}
+	h1 {
+		color: black;
+	}
+}
+@media (max-width: 480px){
 	.player {
 		width: 20px;
 		height: 20px;
@@ -98,6 +123,6 @@ button a{
 		background: green;
 	}	
 	div#game{
-		min-height: 250px;
+		min-height: 200px;
 	}	
 }
